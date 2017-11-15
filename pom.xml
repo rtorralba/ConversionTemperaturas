@@ -11,6 +11,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <junit.jupiter.version>5.0.2</junit.jupiter.version>
     </properties>
 
     <build>
@@ -27,5 +28,22 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+<!--
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+-->
+    </dependencies>
 
 </project>
