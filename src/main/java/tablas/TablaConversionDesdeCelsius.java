@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TablaConversionDesdeCelsius {
+    private List<ConversorDesdeCelsius> conversores = new ArrayList<ConversorDesdeCelsius>();
     private double celsiusInicial;
     private double celsiusFinal;
     private double paso;
@@ -19,13 +20,11 @@ public class TablaConversionDesdeCelsius {
         this.paso = paso;
     }
 
+    public void addConversor(ConversorDesdeCelsius conversor) {
+        conversores.add(conversor);
+    }
+
     public String generaTabla() {
-        List<ConversorDesdeCelsius> conversores = new ArrayList<ConversorDesdeCelsius>();
-        conversores.add(new CelsiusAFahrenheit());
-        conversores.add(new CelsiusAReamur());
-        conversores.add(new CelsiusAKelvin());
-
-
         StringBuilder sb = new StringBuilder();
         double celsius = celsiusInicial;
         while(celsius <= celsiusFinal) {
@@ -35,6 +34,7 @@ public class TablaConversionDesdeCelsius {
                 sb.append(conversor.covierteDesdeCelsius(celsius));
                 sb.append(",");
             }
+            sb.append("\n");
             celsius += paso;
         }
         return sb.toString();
