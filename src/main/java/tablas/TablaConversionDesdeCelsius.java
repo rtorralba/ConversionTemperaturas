@@ -1,8 +1,5 @@
 package tablas;
 
-import conversor.CelsiusAFahrenheit;
-import conversor.CelsiusAKelvin;
-import conversor.CelsiusAReamur;
 import conversor.ConversorDesdeCelsius;
 
 import java.util.ArrayList;
