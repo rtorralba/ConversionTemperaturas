@@ -8,12 +8,12 @@ public class KelvinACelsiusTest {
     @Test
     public void convierteUno() {
         ConversorACelsius conversorACelsius = new KelvinACelsius();
-        assertEquals(-272.16, conversorACelsius.convierteACelsius(1), 0.1);
+        assertEquals(-272.15, conversorACelsius.convierteACelsius(1), 0.1);
     }
 
     @Test
     public void convierteDiez() {
         ConversorACelsius conversorACelsius = new KelvinACelsius();
-        assertEquals(-263.16, conversorACelsius.convierteACelsius(10), 0.1);
+        assertEquals(-263.15, conversorACelsius.convierteACelsius(10), 0.1);
     }
 }
