@@ -6,10 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FahrenheitAKelvinTest {
     @Test
-    public void convierteUno() {
+    public void convierteUno() throws Exception {
         ConversorTemperaturas conversorACelsius = new FahrenheitACelsius();
-        ConversorTemperaturas conversorAkelvin = new CelsiusAKelvin();
-        double kelvin = conversorAkelvin.convierte(conversorACelsius.convierte(1));
+        ConversorTemperaturas conversorAKelvin = new CelsiusAKelvin();
+        ConversorUniversal conversorUniversal = new ConversorUniversal();
+        conversorUniversal.setConversorOrigen(conversorACelsius);
+        conversorUniversal.setConversorDestino(conversorAKelvin);
+        double kelvin = conversorUniversal.convertir(1);
         assertEquals(255.928, kelvin, 0.1);
     }
 }
