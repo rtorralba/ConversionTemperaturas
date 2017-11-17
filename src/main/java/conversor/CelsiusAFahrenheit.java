@@ -1,8 +1,8 @@
 package conversor;
 
-public class CelsiusAFahrenheit implements ConversorDesdeCelsius {
+public class CelsiusAFahrenheit implements ConversorTemperaturas {
     @Override
-    public double covierteDesdeCelsius(double celsius) {
-        return 9.0/5.0 * celsius + 32.0;
+    public double convierte(double temperatura) {
+        return 9.0/5.0 * temperatura + 32.0;
     }
 }

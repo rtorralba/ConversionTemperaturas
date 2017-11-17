@@ -1,8 +1,8 @@
 package conversor;
 
-public class KelvinACelsius implements ConversorACelsius {
+public class KelvinACelsius implements ConversorTemperaturas {
     @Override
-    public double convierteACelsius(double temperature) {
+    public double convierte(double temperature) {
         return temperature - 273.15;
     }
 }

@@ -1,8 +1,8 @@
 package conversor;
 
-public class CelsiusAKelvin implements ConversorDesdeCelsius {
+public class CelsiusAKelvin implements ConversorTemperaturas {
     @Override
-    public double covierteDesdeCelsius(double celsius) {
-        return celsius + 273.15;
+    public double convierte(double temperatura) {
+        return temperatura + 273.15;
     }
 }

@@ -1,8 +1,8 @@
 package conversor;
 
-public class CelsiusANewton implements ConversorDesdeCelsius {
+public class CelsiusANewton implements ConversorTemperaturas {
     @Override
-    public double covierteDesdeCelsius(double celsius) {
-        return celsius * 0.33000;
+    public double convierte(double temperatura) {
+        return temperatura * 0.33000;
     }
 }

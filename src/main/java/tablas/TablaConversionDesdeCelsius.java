@@ -1,12 +1,12 @@
 package tablas;
 
-import conversor.ConversorDesdeCelsius;
+import conversor.ConversorTemperaturas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TablaConversionDesdeCelsius {
-    private List<ConversorDesdeCelsius> conversores = new ArrayList<ConversorDesdeCelsius>();
+    private List<ConversorTemperaturas> conversores = new ArrayList<ConversorTemperaturas>();
     private double celsiusInicial;
     private double celsiusFinal;
     private double paso;
@@ -17,8 +17,8 @@ public class TablaConversionDesdeCelsius {
         this.paso = paso;
     }
 
-    public void addConversor(ConversorDesdeCelsius conversor) {
-        conversores.add(conversor);
+    public void addConversor(ConversorTemperaturas conversorTemperaturas) {
+        conversores.add(conversorTemperaturas);
     }
 
     public String generaTabla() {
@@ -27,8 +27,8 @@ public class TablaConversionDesdeCelsius {
         while(celsius <= celsiusFinal) {
             sb.append(celsius);
             sb.append(",");
-            for (ConversorDesdeCelsius conversor : conversores) {
-                sb.append(conversor.covierteDesdeCelsius(celsius));
+            for (ConversorTemperaturas conversorTemperaturas : conversores) {
+                sb.append(conversorTemperaturas.convierte(celsius));
                 sb.append(",");
             }
             sb.append("\n");

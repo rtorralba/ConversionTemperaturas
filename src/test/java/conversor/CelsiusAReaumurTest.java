@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CelsiusAReaumurTest {
     @Test
     public void convierteCeroCelsiusAReaumurTest() {
-        ConversorDesdeCelsius conversor = new CelsiusAReaumur();
-        assertEquals(0, conversor.covierteDesdeCelsius(0));
+        ConversorTemperaturas conversorTemperaturas = new CelsiusAReaumur();
+        assertEquals(0, conversorTemperaturas.convierte(0));
     }
 }

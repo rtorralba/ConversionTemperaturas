@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CelsiusAFahrenheitTest {
     @Test
     public void convierteCeroCelsiusAFahrenheitTest() {
-        ConversorDesdeCelsius conversor = new CelsiusAFahrenheit();
-        assertEquals(32.0, conversor.covierteDesdeCelsius(0));
+        ConversorTemperaturas conversorTemperaturas = new CelsiusAFahrenheit();
+        assertEquals(32.0, conversorTemperaturas.convierte(0));
     }
 
     @Test
     public void conviertCuarentaCelsiusAFahrenheitTest() {
-        ConversorDesdeCelsius conversor = new CelsiusAFahrenheit();
-        assertEquals(104.0, conversor.covierteDesdeCelsius(40));
+        ConversorTemperaturas conversorTemperaturas = new CelsiusAFahrenheit();
+        assertEquals(104.0, conversorTemperaturas.convierte(40));
     }
 }
