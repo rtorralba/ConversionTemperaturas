@@ -13,6 +13,7 @@
         <java.version>1.8</java.version>
         <junit.jupiter.version>5.0.2</junit.jupiter.version>
         <junit.platform.version>1.0.2</junit.platform.version>
+        <cucumber.version>1.2.5</cucumber.version>
     </properties>
 
     <build>
@@ -53,6 +54,20 @@
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite-api</artifactId>
             <version>${junit.platform.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--Para usar cucumber con Java 8-->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--Para definir Runners JUnit-->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
